@@ -1,7 +1,5 @@
 # CyberLab — Séance 01
 
-Plateforme pédagogique statique en français pour construire un laboratoire VirtualBox. Design sombre, accents rouge/vert/bleu, navigation par étapes, architecture interactive, progression locale, commandes personnalisées et compte rendu exportable.
-
 ## Contenu
 
 - `index.html` : structure de l’interface.
