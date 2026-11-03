@@ -1,10 +1,11 @@
-# CyberLab — Séance 01
+# CyberLab — Séance 02
 
 ## Contenu
 
 - `index.html` : structure de l’interface.
 - `style.css` : thème et adaptation aux petits écrans.
 - `app.js` : huit étapes, commandes, architecture, notes et interactions.
+- Complément **Crackme #1** (reverse engineering) : guide étudiant accessible depuis le bouton « Crackme #1 ↗ » de l’en-tête (fenêtre dédiée, même format que « Architecture »). Le corrigé professeur reste hors du site, dans un fichier séparé non publié.
 - `.nojekyll` : publication statique directe sur GitHub Pages.
 
 Aucun serveur applicatif, compte étudiant, dépendance à compiler ou clé API. Les machines virtuelles sont exécutées sur les ordinateurs des étudiants, pas dans la page Web.
