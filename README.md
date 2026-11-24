@@ -1,4 +1,4 @@
-# CyberLab — Séance 02
+# CyberLab — Séance 01
 
 ## Contenu
 
@@ -6,6 +6,7 @@
 - `style.css` : thème et adaptation aux petits écrans.
 - `app.js` : huit étapes, commandes, architecture, notes et interactions.
 - Complément **Crackme #1** (reverse engineering) : guide étudiant accessible depuis le bouton « Crackme #1 ↗ » de l’en-tête (fenêtre dédiée, même format que « Architecture »). Le corrigé professeur reste hors du site, dans un fichier séparé non publié.
+- Complément **Projet final** (test d’intrusion Metasploitable 2) : bouton « Projet final ↗ » de l’en-tête — mise en situation, installation de la cible, commandes de reconnaissance et objectif. **Sans la liste des failles** (les étudiants les trouvent eux-mêmes) ; le sujet complet, le modèle de rapport et la grille restent hors du site.
 - `.nojekyll` : publication statique directe sur GitHub Pages.
 
 Aucun serveur applicatif, compte étudiant, dépendance à compiler ou clé API. Les machines virtuelles sont exécutées sur les ordinateurs des étudiants, pas dans la page Web.
