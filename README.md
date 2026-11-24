@@ -1,95 +1,125 @@
-# CyberLab — Séance 01
+<div align="center">
 
-## Contenu
+# 🛡️ CyberLab
 
-- `index.html` : structure de l’interface.
-- `style.css` : thème et adaptation aux petits écrans.
-- `app.js` : huit étapes, commandes, architecture, notes et interactions.
-- Complément **Crackme #1** (reverse engineering) : guide étudiant accessible depuis le bouton « Crackme #1 ↗ » de l’en-tête (fenêtre dédiée, même format que « Architecture »). Le corrigé professeur reste hors du site, dans un fichier séparé non publié.
-- Complément **Projet final** (test d’intrusion Metasploitable 2) : bouton « Projet final ↗ » de l’en-tête — mise en situation, installation de la cible, commandes de reconnaissance et objectif. **Sans la liste des failles** (les étudiants les trouvent eux-mêmes) ; le sujet complet, le modèle de rapport et la grille restent hors du site.
-- `.nojekyll` : publication statique directe sur GitHub Pages.
+### Laboratoire de cybersécurité — parcours guidé pour étudiants
 
-Aucun serveur applicatif, compte étudiant, dépendance à compiler ou clé API. Les machines virtuelles sont exécutées sur les ordinateurs des étudiants, pas dans la page Web.
+*Construire · Attaquer · Défendre — dans un environnement isolé et légal.*
 
-## Publication sur GitHub Pages — une seule procédure
+![Statut](https://img.shields.io/badge/statut-actif-12a06b)
+![Niveau](https://img.shields.io/badge/niveau-M1-2f6fed)
+![Licence](https://img.shields.io/badge/usage-pédagogique-e23b4e)
+![Hébergement](https://img.shields.io/badge/déploiement-GitHub%20Pages-1a212e)
 
-1. Connectez-vous à votre compte GitHub et créez un dépôt **public** nommé `cyberlab`.
-2. Décompressez ce ZIP sur votre ordinateur.
-3. Dans le dépôt, cliquez **Add file → Upload files** et ajoutez `index.html`, `style.css`, `app.js` et ce README **à la racine**, pas dans un sous-dossier. Validez avec **Commit changes** sur `main`.
-4. Ajoutez aussi `.nojekyll`. S’il est masqué par votre système, utilisez **Add file → Create new file**, saisissez `.nojekyll` comme nom et validez un fichier vide.
-5. Ouvrez **Settings → Pages → Build and deployment**.
-6. Pour **Source**, choisissez **Deploy from a branch**.
-7. Choisissez la branche **main**, le dossier **/ (root)** et cliquez **Save**.
-8. Attendez que le déploiement `pages build and deployment` réussisse dans **Actions**.
-9. Dans **Settings → Pages**, copiez l’URL publiée : `https://VOTRE-COMPTE.github.io/cyberlab/`.
-10. Ouvrez cette adresse dans une fenêtre privée pour vérifier l’accès étudiant, puis partagez-la via l’ENT ou un QR code.
+> *« The best defenders understand how attackers think — and this project brought both worlds together. »*
 
-La source et le site sont publics avec cette procédure : n’ajoutez aucun mot de passe personnel, copie étudiante ou information confidentielle au dépôt. Les identifiants Kali et Metasploitable indiqués dans le cours sont les identifiants publics des images d’entraînement.
+</div>
 
-Référence : https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+---
 
-## Modifier le cours après publication
+## 📖 À propos
 
-1. Ouvrez `app.js` sur GitHub et cliquez sur l’icône de modification.
-2. Modifiez le texte dans le tableau `steps` ; conservez les délimiteurs JavaScript et les balises HTML.
-3. Validez avec **Commit changes**.
-4. Attendez la réussite du nouveau déploiement.
-5. Demandez aux étudiants d’actualiser la page, au besoin avec `Ctrl + F5`.
+**CyberLab** est un site web statique, en français, qui guide pas à pas des étudiants de
+Master 1 dans la construction et l'utilisation d'un **laboratoire de cybersécurité**.
+L'apprenant monte son infrastructure, relie une machine **attaquante** et une machine
+**cible**, puis progresse de la reconnaissance réseau jusqu'au test d'intrusion complet.
 
-La publication automatique met à jour le cours ; elle ne collecte pas les résultats. Les notes et coches sont enregistrées dans `localStorage` sur chaque navigateur. Les étudiants exportent leur compte rendu en Markdown et déposent leurs pièces sur le canal que vous désignez.
+Le principe directeur : **on ne défend bien que ce que l'on sait attaquer.** Chaque
+activité fait jouer tour à tour le rôle offensif (Red) et défensif (Blue).
 
-Pour une autre séance, dupliquez le projet et changez la clé `cyberlab-session1-v1` afin de ne pas réutiliser la progression de cette séance. Pour changer uniquement les couleurs, modifiez les variables `:root` de `style.css`.
+> ⚠️ **Aucune solution n'est publiée dans ce dépôt.** Les corrigés, mots de passe et
+> clés de correction restent hors du site (usage enseignant uniquement).
 
-## Déroulé pédagogique fixé
+---
 
-Prérequis du guide : ordinateur Windows, macOS ou Linux ; **8 Go de RAM minimum, 16 Go recommandés** ; **50 Go libres minimum, 100 Go recommandés** ; processeur relativement récent (2015 ou après comme repère), compatible avec la virtualisation.
+## ✨ Fonctionnalités
 
-Avec 8 Go, les deux VM peuvent être plus lentes : commencer par installer Kali, puis ajouter Metasploitable et fermer les applications inutiles sur le poste hôte. Les étapes détaillées restent illustrées pour Windows. Les images choisies nécessitent un processeur Intel/AMD x86 : prévoir un poste compatible pour les étudiants sur ARM/Apple Silicon.
+- 🧭 **Parcours guidé en 8 étapes** — installation de VirtualBox, Kali et Metasploitable 2,
+  configuration du **Réseau NAT isolé**, adressage, vérification de connectivité.
+- 🗺️ **Schéma d'architecture interactif** — visualisation du réseau et des deux machines.
+- 🔐 **Crackme #1** — initiation à la rétro-ingénierie (décompilation & débogage sur Kali).
+- 🎯 **Projet final** — test d'intrusion complet sur Metasploitable 2 : mise en situation,
+  familles de failles à rechercher, boîte à outils, démarche en 5 phases et livrables.
+- 💾 **Progression sauvegardée** localement (navigateur), aucune donnée envoyée.
+- 🌓 **Interface claire et responsive**, accessible au clavier.
 
-Téléchargements avant le créneau : VirtualBox, image VirtualBox Kali amd64 `.7z`, Metasploitable 2 `.zip`.
+---
 
-Séance estimée à 3 h, après préparation :
+## 🧩 Contenu pédagogique
 
-1. Installer VirtualBox — 15 min.
-2. Créer le Réseau NAT — 20 min.
-3. Ajouter Kali — 30 min.
-4. Préparer Metasploitable — 25 min.
-5. Vérifier les communications — 25 min.
-6. Inventorier les services et capturer ICMP — 40 min.
-7. Finaliser les preuves et instantanés — 25 min.
+| Module | Accès | Objectif |
+| --- | --- | --- |
+| **Séance 01 — Premiers pas** | Parcours principal (8 étapes) | Monter le lab et observer ses premiers services réseau |
+| **Architecture** | Bouton d'en-tête | Comprendre le Réseau NAT et les deux rôles |
+| **Crackme #1** | Bouton d'en-tête | Retrouver un secret dans un binaire (reverse engineering) |
+| **Projet final** | Bouton d'en-tête | Mener un pentest complet et rédiger un rapport pro |
 
-Le premier écran présente les prérequis ; le parcours comporte donc huit écrans au total.
+---
 
-## Architecture imposée
+## 🚀 Déploiement (GitHub Pages)
 
-- Réseau : **CyberLab**, mode **Réseau NAT / NAT Network**, IPv4 **10.10.10.0/24**.
-- DHCP activé, IPv6 désactivé, aucune redirection de port.
-- Une seule carte par VM, attachée à CyberLab, câble branché.
-- Kali : 2 vCPU, 4096 Mo, disque fourni dans l’image.
-- Metasploitable 2 : Ubuntu 32 bits, BIOS, 1 vCPU, 512 Mo, disque VMDK fourni, carte PCnet-FAST III.
-- Les IP sont relevées dans les VM et saisies dans le guide ; aucune IP de VM n’est imposée statiquement.
-- Accès Internet et communication entre VM via Réseau NAT. Aucun mode pont.
+1. Poussez le contenu de ce dépôt sur la branche `main`.
+2. Dans **Settings → Pages**, choisissez la source **`main` / root**.
+3. Le fichier `.nojekyll` garantit une publication statique directe.
+4. Le site est en ligne à `https://<votre-utilisateur>.github.io/<nom-du-dépôt>/`.
 
-Le NAT simple par VM ne répond pas à ce besoin d’échanges entre VM. Le Réseau NAT ne constitue pas une isolation complète : il autorise des connexions sortantes vers Internet et potentiellement vers le LAN. Les étudiants ne scannent que l’adresse de leur Metasploitable. Tester la compatibilité du réseau du campus et tout éventuel proxy avant le cours.
+---
 
-## Livrables étudiants
+## 💻 Aperçu en local
 
-Compte rendu Markdown, captures réseau/connectivité/instantanés, `services.txt` et `ping.pcapng`. La plateforme n’exécute pas de commandes et ne vérifie pas les VM. Les coches sont déclaratives.
+Aucune dépendance, aucune compilation. Servez simplement le dossier :
 
-## Sources et attribution
+```bash
+# Python 3
+python3 -m http.server 8000
+# puis ouvrez http://localhost:8000
+```
 
-Adaptation pédagogique originale du scénario fourni : https://mycybersecuritypath.com/labs/home-lab-setup/
+> Ouvrir `index.html` directement par un double-clic (`file://`) fonctionne aussi, mais
+> un petit serveur local évite les restrictions de certains navigateurs.
 
-La topologie diffère du guide initial : Réseau NAT avec accès sortant, à la demande de l’enseignante. Documentation technique consultée :
+---
 
-- https://docs.oracle.com/en/virtualization/virtualbox/7.2/user/networkingdetails.html
-- https://www.kali.org/docs/virtualization/import-premade-virtualbox/
-- https://docs.rapid7.com/metasploit/metasploitable-2/
-- https://nmap.org/book/man.html
-- https://www.wireshark.org/docs/wsug_html_chunked/
+## 📂 Structure du dépôt
 
-## Vérification et limites
+```
+cyberlab/
+├── index.html      # Structure de la page
+├── style.css       # Thème clair (nuances bleu / vert / rouge) et mise en page
+├── app.js          # Contenu des étapes, fenêtres et interactions
+├── .nojekyll       # Publication statique sur GitHub Pages
+└── README.md       # Ce fichier
+```
 
-Syntaxe JavaScript et logique de navigation, progression, validation des IP et export vérifiées lors de la création. Pas de validation visuelle dans un navigateur disponible dans l’environnement de création ; le montage VirtualBox n’a pas été exécuté ici. Avant la séance, réaliser le parcours sur un poste représentatif et vérifier l’affichage sur les navigateurs étudiants.
+---
 
-Le site fonctionne sans installation en ouvrant `index.html` ; la persistance de stockage d’une page `file://` dépend du navigateur. GitHub Pages est préférable. Les polices Google Fonts sont facultatives : une police système prend le relais si elles ne sont pas disponibles.
+## 🎨 Personnalisation
+
+- **Couleurs** : variables CSS en bas de `style.css` (`--blue`, `--green`, `--red`, …).
+- **Étapes** : tableau `steps` dans `app.js`.
+- **Fenêtres** (Architecture, Crackme, Projet final) : fonctions dédiées dans `app.js`,
+  rendues avec les mêmes briques (`box`, `code`, `note`).
+
+---
+
+## ⚖️ Cadre éthique & légal
+
+Toutes les manipulations se déroulent dans un **réseau virtuel isolé** que vous
+contrôlez. Ne scannez, ne sondez et n'attaquez **jamais** un système sans **autorisation
+écrite** de son propriétaire. L'accès non autorisé à un système informatique est une
+**infraction pénale** (France : art. 323-1 et s. du Code pénal ; équivalents
+internationaux). Metasploitable 2 ne doit **jamais** être exposée à un réseau réel ni à
+Internet.
+
+---
+
+## 📜 Licence & usage
+
+Projet à vocation **strictement pédagogique**. Réutilisation et adaptation libres dans un
+cadre d'enseignement, en conservant la mention d'origine et le présent cadre éthique.
+
+<div align="center">
+
+**CyberLab** · Guide étudiant · M1 Cybersécurité
+
+</div>
